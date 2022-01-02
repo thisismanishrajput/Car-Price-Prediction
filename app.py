@@ -8,7 +8,7 @@ app = Flask(__name__)
 model = pickle.load(open('random_forest_regression_model.pkl', 'rb'))
 
 
-@app.route('/')
+@app.route('/', methods = ['GET])
 def Home():
     return render_template("index.html")
 
